@@ -31,13 +31,10 @@ class UserController extends Controller
 
 // user sign in function
   public function PostSignIn(Request $request){
-    $dataAttempt = array(
-                'email' => Input::get('email'),
-                'password' => Input::get('password')
-            );
-  //  if(Auth::attempt(['email'=>$request['email'],'password'=>bcrypt($request['password'])])){
-    if(Auth::attempt($dataAttempt)){
-      return redirect()->home();
+
+   if(Auth::attempt(['email'=>$request['email'],'password'=>bcrypt($request['password'])])){
+    
+        return redirect('/dashboard');
     } else {
         return redirect()->back();
     }
