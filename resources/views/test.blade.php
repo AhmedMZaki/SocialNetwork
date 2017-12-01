@@ -5,5 +5,7 @@
 @endsection
 
 @section('content')
-  <p class="btn btn-success">page content!!</p>
+  <div class="container">
+    <p class="btn btn-success">page content!!</p>
+  </div>
 @endsection
