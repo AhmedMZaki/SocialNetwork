@@ -9,11 +9,11 @@ use App\User;
 class UserController extends Controller
 {
 
-  public function getDashboard(){
+  public function UserDashboard(){
     return view('dashboard');
   }
   //user sign up function
-  public function PostSignUp(Request $request){
+  public function UserSignUp(Request $request){
     // optaining user info
     $first_name=$request['first_name'];
     $email=$request['email'];
@@ -30,10 +30,10 @@ class UserController extends Controller
 
 
 // user sign in function
-  public function PostSignIn(Request $request){
+  public function UserSignIn(Request $request){
 
    if(Auth::attempt(['email'=>$request['email'],'password'=>bcrypt($request['password'])])){
-    
+
         return redirect('/dashboard');
     } else {
         return redirect()->back();

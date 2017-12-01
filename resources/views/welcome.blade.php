@@ -9,7 +9,7 @@
     {{--  sign in form --}}
     <div class="col-md-6">
       <h3>Sign In</h3>
-       <form action="/signin" method="post">
+       <form action="/signin" method="POST">
          {{ csrf_field() }}
            <div class="form-group">
              <label for="email">Your E-Mail</label>
@@ -26,7 +26,7 @@
     <div class="col-md-6">
        {{-- registration form --}}
       <h3>Sign Up</h3>
-       <form action="/signup" method="post">
+       <form action="/signup" method="POST">
          {{ csrf_field() }}
          <div class="form-group">
            <label for="first_name">First Name</label>
