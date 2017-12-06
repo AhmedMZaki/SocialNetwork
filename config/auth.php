@@ -68,6 +68,9 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+            'table' => 'users',
+            'reminder' => array(
+            'email' => 'emails.auth.reminder', 'table' => 'password_reminders',),
         ],
 
         // 'users' => [
